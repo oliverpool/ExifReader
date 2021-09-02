@@ -293,13 +293,14 @@ tags (resulting bundle will be ~16 % of a full build):
 ```
 
 Then, if you didn't install ExifReader yet, just run `npm install exifreader`.
-Otherwise you have to re-build the library:
+Otherwise you have to re-build the library: `npm rebuild exifreader`.
 
-```bash
-npm rebuild exifreader
-```
+If you use `yarn`, simply run `yarn add exifreader` to rebuild the library.
 
 After that the new bundle is here: `node_modules/exifreader/dist/exif-reader.js`
+
+If you are using `vite`, you will need to [clear the dependency cache](https://vitejs.dev/guide/dep-pre-bundling.html#file-system-cache)
+after a rebuild.
 
 If you're using the include pattern config, remember to include everything you
 want to use. If you want `xmp` and don't specify any file types, you will get
